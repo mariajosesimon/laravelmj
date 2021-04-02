@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* REF: https://tailwindcss.com/docs/adding-base-styles */
+@layer base {
+    h1 {
+        @apply text-6xl p-8 bg-blue-500 text-white;
+    }
+
+    th {
+        @apply bg-gray-200 text-left text-xl;
+    }
+
+    td, th {
+        @apply p-2;
+    }
+
+    a {
+        @apply text-blue-500 hover:underline;
+    }
+}
+
+/* REF: https://tailwindcss.com/docs/extracting-components#extracting-component-classes-with-apply */
+/* REF: REF: https://tailwindcomponents.com/component/button-component */
+@layer components {
+    .btn-primary {
+        @apply inline-block focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg hover:no-underline;
+    }
+
+    .btn-secondary {
+        @apply inline-block focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gray-500 hover:bg-gray-600 hover:shadow-lg hover:no-underline;
+    }
+
+    .btn-danger {
+        @apply inline-block focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-red-500 hover:bg-red-600 hover:shadow-lg hover:no-underline;
+    }
+
+    .tabla-alterna > tbody > tr:nth-of-type(even) {
+        @apply bg-gray-100;
+    }
+
+    .tabla-hover > tbody > tr {
+        @apply hover:bg-gray-100;
+    }
+}
